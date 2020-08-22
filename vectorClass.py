@@ -36,6 +36,9 @@ class Vector:
         
         return Vector(self.x/self.len,self.y/self.len,self.z/self.len)
 
+    def arr2d(self):
+        return [self.x,self.y]
+
     def __add__(self,v2):
         return Vector(v2.x+self.x,v2.y+self.y,v2.z+self.z)
 
