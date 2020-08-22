@@ -39,6 +39,9 @@ class Vector:
     def __add__(self,v2):
         return Vector(v2.x+self.x,v2.y+self.y,v2.z+self.z)
 
+    def __sub__(self,v2):
+        return Vector(self.x-v2.x,self.y-v2.y,self.z-v2.z)
+
     def __str__(self):
         return f"Vector: <{self.x},{self.y},{self.z}>"
     

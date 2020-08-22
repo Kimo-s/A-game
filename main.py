@@ -1,6 +1,7 @@
 import numbers as np
 import pygame
 import math
+import time
 import sys
 from vectorClass import Vector, findOrginial
 from player import Player
@@ -14,7 +15,8 @@ screen = pygame.display.set_mode(size)
 
 
 
-player = Player([width/2,height/2], screen,yellow)
+player = Player([width/2,height/2], screen, yellow)
+FPS = pygame.time.Clock()
 
 while 1:
 
@@ -25,7 +27,9 @@ while 1:
     key = pygame.key.get_pressed()
     player.move(key)
     player.show()
+    player.laser()
+
+
 
     pygame.display.flip()
-    pygame.display.update()
-
+    FPS.tick()
